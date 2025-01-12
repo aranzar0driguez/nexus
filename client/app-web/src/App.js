@@ -1,18 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-import Button from '@mui/material/Button'
+import React from 'react';
+import { Home,} from './pages';
 
-function App() 
-{ 
-    return ( 
-    <div> 
-      <Button variant="contained" color="primary">
-      Hello World 
-      </Button> 
-    </div> 
-        ); 
-      
-} 
-        
-        
-      export default App;
+const App = () => {
+  return (
+    <div>
+      <Home/>
+    </div>
+  );
+};
+
+export default App;
