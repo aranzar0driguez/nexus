@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+env/
+pyvenv.cfg
+bin/
+include/
+lib/
+
+# IDE
+.vscode/
+.idea/
+
+# Ignore macOS system files
+.DS_Store
+client/.DS_Store
+server/.DS_Store
