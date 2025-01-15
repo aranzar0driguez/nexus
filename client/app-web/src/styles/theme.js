@@ -1,15 +1,18 @@
 // src/styles/theme.js
+import { red } from "@mui/material/colors";
 import { createTheme } from "@mui/material/styles";
 
 // Define your colors
 const nexusTheme = createTheme({
   palette: {
     primary: {
-      main: "#faf3dd" // Office green
+      main: "#6c7c59" // Reseda green
     },
     secondary: {
-      main: "#ccdf92", // Emerald 45503b
+      main: "#FAEBCF", // Mindaro
+      // Emerald 45503b
     },
+  
     info: {
       main: "#b8f2e6", // Tiffany blue
     },
@@ -17,7 +20,7 @@ const nexusTheme = createTheme({
       default: "#45503b", // Payne's gray
     },
     text: {
-      primary: "#FFFFFF", // Oxford blue
+      primary: "#FFFFFF", // White
       // main: "#45503b", // Ebony
     },
   },
