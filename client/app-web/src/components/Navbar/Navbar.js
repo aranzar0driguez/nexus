@@ -3,12 +3,14 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
+import SpaIcon from '@mui/icons-material/Spa';
 import InputBase from "@mui/material/InputBase";
 import Box from "@mui/material/Box";
 import { styled, alpha } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
 import SettingsIcon from "@mui/icons-material/Settings";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import nexusTheme from "../../styles/theme";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -51,12 +53,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 function Navbar() {
   return (
-    <AppBar position="static" style={{ backgroundColor: "#536878" }}>
+    <AppBar position="static" theme={nexusTheme} color="secondary">
       <Toolbar>
         {/* Logo and App Name on the left */}
         <IconButton edge="start" color="inherit" aria-label="logo">
-          <img src="/logo.png" alt="App Logo" style={{ width: 40 }} />
-        </IconButton>
+          {/* <img src="/logo.png" alt="App Logo" style={{ width: 40 }} /> */}
+          <SpaIcon color="main" sx={{ fontSize: 35 }}/>
+          </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           Nexus
         </Typography>

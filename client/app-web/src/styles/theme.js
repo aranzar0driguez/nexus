@@ -6,11 +6,9 @@ const nexusTheme = createTheme({
   palette: {
     primary: {
       main: "#faf3dd" // Office green
-      // main: "#b8f2e6", // Ebony
     },
     secondary: {
-      main: "#faf3dd", // Emerald 45503b
-      // main: "6C7C59" // Reseda Green
+      main: "#ccdf92", // Emerald 45503b
     },
     info: {
       main: "#b8f2e6", // Tiffany blue
