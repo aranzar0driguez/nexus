@@ -5,23 +5,39 @@ import { createTheme } from "@mui/material/styles";
 const nexusTheme = createTheme({
   palette: {
     primary: {
-      main: "#aed9e0", // Office green
+      main: "#faf3dd" // Office green
+      // main: "#b8f2e6", // Ebony
     },
     secondary: {
-      main: "#faf3dd", // Emerald
+      main: "#faf3dd", // Emerald 45503b
+      // main: "6C7C59" // Reseda Green
     },
     info: {
       main: "#b8f2e6", // Tiffany blue
     },
     background: {
-      default: "#faf3dd", // Payne's gray
+      default: "#45503b", // Payne's gray
     },
     text: {
-      primary: "#5e6472", // Oxford blue
+      primary: "#FFFFFF", // Oxford blue
+      // main: "#45503b", // Ebony
     },
   },
   typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    // fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: '"Libre Franklin", "Roboto", "Helvetica", "Arial", sans-serif',
+    h1: {
+      fontWeight: 700,
+    },
+    h2: {
+      fontWeight: 600,
+    },
+    body1: {
+      fontWeight: 400,
+    },
+    body2: {
+      fontWeight: 300,
+    },
   },
 });
 
