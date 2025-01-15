@@ -1,11 +1,18 @@
-import React from 'react';
-import { Home,} from './pages';
+import React from "react";
+import { LandingPage } from "./pages";
+import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import nexusTheme from "./styles/theme";
 
 const App = () => {
   return (
-    <div>
-      <Home/>
-    </div>
+    <ThemeProvider theme={nexusTheme}>
+      <CssBaseline />
+      {/* Your application components go comment comment */}
+      <div>
+        <LandingPage />
+      </div>
+    </ThemeProvider>
   );
 };
 
