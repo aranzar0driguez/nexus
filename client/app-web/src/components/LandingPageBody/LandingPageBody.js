@@ -1,13 +1,12 @@
 import React from 'react';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
+import { Container, Stack, Typography, Button, Box, Accordion, AccordionDetails, AccordionSummary } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import nexusTheme from '../../styles/theme';
 import SpaIcon from '@mui/icons-material/Spa';
 import { styled } from '@mui/material/styles';
 import ButtonBase from '@mui/material/ButtonBase';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 
 /* 
@@ -118,6 +117,17 @@ const ImageMarked = styled('span')(({ theme }) => ({
 
 /* - - - END OF MUI API CODE - - -*/
 
+/* Defines the containers for the "How does Nexus work?" */
+const AboutNexusContainer = styled(Container)(({ theme }) => ({
+  height: '40vh', 
+  width: '40vw', 
+  border: "1px solid white", 
+  display: "flex", 
+  alignItems: "center", 
+  justifyContent: "center"
+
+}))
+
 const LandingPageBody = () => {
 
   return (
@@ -125,14 +135,14 @@ const LandingPageBody = () => {
     <main>
       {/* First section of the landing page */}
 
-      <Box theme={{nexusTheme}} sx={{ height: '70vh', paddingTop: '40px', background: 'linear-gradient(to right,rgb(72, 120, 78),rgb(49, 87, 49))',}}>
+      <Box theme={{nexusTheme}} sx={{ height: '80vh', paddingTop: '17vh', background: 'linear-gradient(to right,rgb(72, 120, 78),rgb(49, 87, 49))',}}>
         <Grid container spacing={2}>
           <Grid size={6} alignContent={'center'} sx={{ paddingLeft: { xs: '5vw', sm: '5vw', md: '15vw' } }}>
               <Typography fontSize="2rem" >Become the boss of your</Typography>
               <Typography fontSize="7rem" fontWeight={'bold'} marginBottom={-5}>Mental</Typography>
               <Typography fontSize="7rem" fontWeight={'bold'} marginTop={-5}>Health.</Typography>
               <Button variant="contained" color="secondary" sx={{ margin: '10px 0', color: "primary", borderRadius: '25px'}}>
-                Get Started
+                Take the Quiz
               </Button>
           </Grid>
           <Grid align="center" size={6} >
@@ -162,7 +172,7 @@ const LandingPageBody = () => {
           </Typography>
 
           <Button variant="contained" sx={{marginTop: "4vh", borderRadius: '25px'}}>
-            Take the quiz
+            Get Started
           </Button>
 
         </Grid>
@@ -208,11 +218,53 @@ const LandingPageBody = () => {
     </Box>
 
     {/* Third section of the landing page */}
-    <Box theme={nexusTheme} sx={{ height: '100vh', backgroundColor: "primary", color: "black", display: "flex", justifyContent: "center", paddingBottom: "6rem"}}>
-        <Typography variant='h3' color="white" sx={{paddingTop: "4vh"}}>
-          How does Nexus work?
-        </Typography>
-    </Box>
+    <section>
+      <Box theme={nexusTheme} sx={{ height: '100vh', backgroundColor: "primary", display: "flex", alignItems: "center", paddingBottom: "6rem", flexDirection: "column"}}>
+          
+          <Typography variant='h3' color="white" sx={{padding: "4vh 0"}}>
+            How does Nexus work?
+          </Typography>
+
+          <Stack spacing={3} direction="row" sx={{border: "1px solid white"}} >
+
+          <AboutNexusContainer display="flex" flexDirection="row">
+          <div>
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<ArrowDownwardIcon />}
+                aria-controls="panel1-content"
+                id="panel1-header"
+              >
+                <Typography component="span" color="black"><b>Complete our short quiz</b></Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography color="black">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                  malesuada lacus ex, sit amet blandit leo lobortis eget.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<ArrowDownwardIcon />}
+                aria-controls="panel1-content"
+                id="panel1-header"
+              >
+                <Typography component="span" color="black"><b>Get placed into a hub</b></Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography color="black">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                  malesuada lacus ex, sit amet blandit leo lobortis eget.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+          </AboutNexusContainer>
+          <AboutNexusContainer>Image goes here</AboutNexusContainer>
+          </Stack>
+      </Box>
+    </section>
     </main>
     
   );
