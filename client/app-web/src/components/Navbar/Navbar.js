@@ -36,7 +36,11 @@ function Navbar() {
   /* Creates a navbar variable that holds the current state, 
     and setNavbar is the function you can use to modify the 
     state. This code helps change the navbar's color when the
-    user scrolls.*/
+    user scrolls.
+    
+    The useState() is known as a hook()
+  */
+
   const [navbar, setNavbar] =  useState(false);
   const changeNavBarColor = () => {
 
@@ -60,11 +64,11 @@ function Navbar() {
           Nexus
         </Typography>
 
-
+N
         <Box sx={{width: "100%", flexGrow: 1, display: "flex", justifyContent: "center"}}>
           <NavButtonsDiv>
             <Stack direction="row" spacing={3}>
-              <NavBarButton color='inerit'>Home</NavBarButton>
+              <NavBarButton color='inherit'>Home</NavBarButton>
               <NavBarButton color='inherit'>Learn More</NavBarButton>
               <NavBarButton color='inherit'>Hubs</NavBarButton>
               <NavBarButton color='inherit'>Get Started</NavBarButton>

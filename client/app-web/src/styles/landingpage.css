@@ -4,5 +4,9 @@
 }
 
 .navbar.active {
-    background: black;
+    background: black;    
+}
+
+.navbar.active > .NavBarButton:hover {
+    color: white;
 }
