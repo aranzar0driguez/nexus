@@ -34,7 +34,7 @@ const NavButtonsDiv = styled("div")(({ theme }) => ({
   padding: "7px",
 }));
 
-function Navbar() {
+function LoginNavbar() {
   /* Creates a navbar variable that holds the current state, 
     and setNavbar is the function you can use to modify the 
     state. This code helps change the navbar's color when the
@@ -81,7 +81,9 @@ function Navbar() {
         >
           <NavButtonsDiv>
             <Stack direction="row" spacing={3}>
-              <NavBarButton color="inherit">Home</NavBarButton>
+              <Link to="/">
+                <NavBarButton color="inherit">Home</NavBarButton>
+              </Link>
               <NavBarButton color="inherit">Learn More</NavBarButton>
               <NavBarButton color="inherit">Hubs</NavBarButton>
               <NavBarButton color="inherit">Get Started</NavBarButton>
@@ -90,9 +92,6 @@ function Navbar() {
         </Box>
         {/* Login and Settings Icon on the right */}
         <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Link to="/login">
-            <Button variant="contained">Login</Button>
-          </Link>
           <IconButton color="inherit">
             <SettingsIcon />
           </IconButton>
@@ -102,4 +101,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default LoginNavbar;
