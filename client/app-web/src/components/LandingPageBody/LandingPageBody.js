@@ -3,8 +3,9 @@ import { Stack, Typography, Button, Box } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import nexusTheme from '../../styles/theme';
 import SpaIcon from '@mui/icons-material/Spa';
-import HubIcon from '@mui/icons-material/Hub';
-import { AccordionListItem, HubImagesIcons, AboutNexusContainer } from './LandingPageComponents';
+import { HubImagesIcons, AboutNexusItem } from './LandingPageComponents';
+import PeopleIcon from '@mui/icons-material/People';
+import GroupsIcon from '@mui/icons-material/Groups';
 
 const LandingPageBody = () => {
 
@@ -12,20 +13,51 @@ const LandingPageBody = () => {
     
     <main>
       {/* First section of the landing page */}
+      {/* size={6}  */}
+      <Box theme={{nexusTheme}} sx={{ height: 'auto', paddingTop: '5vh', paddingBottom: '10vh', background: 'linear-gradient(to right,rgb(72, 120, 78),rgb(49, 87, 49))',}}>
+        <Grid 
+          container spacing={2} 
+          sx= {{
+            flexDirection: {xs: 'column-reverse', sm: 'column-reverse', md: 'row'},
+            alignItems: {xs: 'center', sm: 'center'}
+          }}> 
+            
+          <Grid 
+            alignContent={'center'}
+            item
+            sx={{ 
+              textAlign: {xs: 'center', sm: 'center', md: 'right'},
+              width: {xs: '100%', sm: '100%', md: '40%'}
+            }}>
 
-      <Box theme={{nexusTheme}} sx={{ height: '80vh', paddingTop: '17vh', background: 'linear-gradient(to right,rgb(72, 120, 78),rgb(49, 87, 49))',}}>
-        <Grid container spacing={2}>
-          <Grid size={6} alignContent={'center'} sx={{ paddingLeft: { xs: '5vw', sm: '5vw', md: '15vw' } }}>
-              <Typography fontSize="2rem" >Become the boss of your</Typography>
-              <Typography fontSize="7rem" fontWeight={'bold'} marginBottom={-5}>Mental</Typography>
-              <Typography fontSize="7rem" fontWeight={'bold'} marginTop={-5}>Health.</Typography>
-              <Button variant="contained" color="secondary" sx={{ margin: '10px 0', color: "primary", borderRadius: '25px'}}>
+              <Typography 
+                sx={{ fontSize: 'clamp(20px, 2.5vw, 32px)'}}>
+                Become the boss of your
+              </Typography>
+              
+              <Typography 
+                fontWeight={'bold'} 
+                sx={{ fontSize: 'clamp(30px, 7.5vw, 112px)', lineHeight: 1}}>
+                Mental
+              </Typography>
+
+              <Typography 
+                fontWeight={'bold'} 
+                sx={{ fontSize: 'clamp(30px, 7.5vw, 112px)', lineHeight: 1}}>
+                Health.
+              </Typography>
+
+              <Button 
+                variant="contained" 
+                color="secondary" 
+                sx={{ margin: '10px 0', color: "primary", borderRadius: '25px'}}>
                 Take the Quiz
               </Button>
+
           </Grid>
-          <Grid align="center" size={6} >
+          <Grid align="center" sx={{width: {xs: '100%', sm: '100%', md: '58%'}}}>
             
-            <SpaIcon sx={{ fontSize: 400, filter: "drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.8))" }}/>
+            <SpaIcon sx={{ fontSize: 'clamp(300px, 35.0vw, 400px)', filter: "drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.8))" }}/>
 
           </Grid>
         </Grid>
@@ -44,7 +76,7 @@ const LandingPageBody = () => {
             Community Hubs
           </Typography>
 
-          <Typography fontSize="1.4rem" textAlign={'left'} sx={{paddingTop: '20px'}}>
+          <Typography fontSize="1.35rem" textAlign={'left'} sx={{paddingTop: '20px'}}>
             After completing a brief quiz, you will get placed into one of the following hubs where you'll 
             be able to connect with likeminded people. 
           </Typography>
@@ -57,12 +89,7 @@ const LandingPageBody = () => {
 
         {/* Right side of grid (images) */}
         <Grid size={7}>
-        {/* 
-          The following code is obtained from the MUI documentation. This code 
-          draws the cells with the images 
-        */}
           <HubImagesIcons></HubImagesIcons>
-      {/* - - - End of MUI code - - - */}
       </Grid>
 
       </Grid>
@@ -70,24 +97,27 @@ const LandingPageBody = () => {
 
     {/* Third section of the landing page */}
     <section>
-      <Box theme={nexusTheme} sx={{ height: 'auto', backgroundColor: "primary", display: "flex", alignItems: "center", paddingBottom: "6rem", flexDirection: "column"}}>
+      <Box theme={nexusTheme} sx={{ height: 'auto', backgroundColor: "primary", display: "flex", alignItems: "center", padding: "5rem 0", flexDirection: "column"}}>
           
-          <Typography variant='h3' color="white" sx={{padding: "4vh 0"}}>
-            How does Nexus work?
-          </Typography>
+          <Typography variant='h3' color="white" sx={{padding: "4vh 0"}}><b>So, how exactly does Nexus work?</b></Typography>
 
-          <Stack spacing={3} direction="row"  >
+          <Typography variant='h5' color="white" sx={{padding: "4vh 0"}}>Don't worry. Your data is <i>always</i> anonymized.</Typography>
 
-          <AboutNexusContainer display="flex" flexDirection="row">
-          <div>
-            <AccordionListItem listTitle={'Take a quiz'} listDescription={'This is where we would put some description about this step.'}/>
-            <AccordionListItem listTitle={'Get placed into a hub'} listDescription={'This is where we would put some description about this step.'}/>
-            <AccordionListItem listTitle={'Connect with our community'} listDescription={'This is where we would put some description about this step.'}/>
-          </div>
-          </AboutNexusContainer>
-          <AboutNexusContainer justifyContent="center">
-            <HubIcon color="white" sx={{fontSize: 330}}/>
-          </AboutNexusContainer>
+          <Stack spacing={5} direction="row" >
+            <AboutNexusItem 
+              title="Quiz" 
+              description="Start by taking a short quiz designed to help us better understand your personality and identify any potential mental health concerns."
+            />
+            <AboutNexusItem 
+              icon={PeopleIcon}
+              title="Hub" 
+              description="After taking our quiz, you will be placed into one of our hubs. Each hub is composed of members that rank of highest similarity to you."
+            />
+            <AboutNexusItem 
+              icon={GroupsIcon}
+              title="Community" 
+              description="You can also connect with others in our community through an anonymous forum where everyone is invited to share their thoughts!"
+            />
           </Stack>
       </Box>
     </section>
