@@ -1,7 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import {  Navbar, LandingPageBody, Footer } from '../../components';
-
+import { Navbar, LandingPageBody, Footer } from "../../components";
 
 const LandingPage = () => {
   return (
