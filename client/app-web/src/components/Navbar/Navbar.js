@@ -57,12 +57,11 @@ function Navbar() {
   return (
     <AppBar
       className={navbar ? "navbar active" : "navbar"}
-      position="fixed"
+      position="static"
       theme={nexusTheme}
-      color="linear-gradient(to right,rgb(72, 120, 78),rgb(49, 87, 49))"
-      sx={{ boxShadow: "none" }}
+      sx={{ boxShadow: "none", background: "linear-gradient(to right,rgb(72, 120, 78),rgb(49, 87, 49))"}}
     >
-      <Toolbar>
+      <Toolbar sx={{ paddingTop:"3vh" }}>
         {/* Logo and App Name on the left */}
         <IconButton edge="start" color="inherit" aria-label="logo">
           {/* <img src="/logo.png" alt="App Logo" style={{ width: 40 }} /> */}
@@ -79,7 +78,7 @@ function Navbar() {
             justifyContent: "center",
           }}
         >
-          <NavButtonsDiv>
+          <NavButtonsDiv> {/* Gives the navbar buttons a pill-like/transluscent background */}
             <Stack direction="row" spacing={3}>
               <NavBarButton color="inherit">Home</NavBarButton>
               <NavBarButton color="inherit">Learn More</NavBarButton>

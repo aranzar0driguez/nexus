@@ -14,7 +14,7 @@ const LandingPageBody = () => {
     <main>
       {/* First section of the landing page */}
       {/* size={6}  */}
-      <Box theme={{nexusTheme}} sx={{ height: 'auto', paddingTop: '5vh', paddingBottom: '10vh', background: 'linear-gradient(to right,rgb(72, 120, 78),rgb(49, 87, 49))',}}>
+      <Box theme={{nexusTheme}} sx={{ height: 'auto', paddingTop: '7vh', paddingBottom: '10vh', background: 'linear-gradient(to right,rgb(72, 120, 78),rgb(49, 87, 49))',}}>
         <Grid 
           container spacing={2} 
           sx= {{
@@ -57,7 +57,7 @@ const LandingPageBody = () => {
           </Grid>
           <Grid align="center" sx={{width: {xs: '100%', sm: '100%', md: '58%'}}}>
             
-            <SpaIcon sx={{ fontSize: 'clamp(300px, 35.0vw, 400px)', filter: "drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.8))" }}/>
+            <SpaIcon sx={{ fontSize: 'clamp(320px, 35.0vw, 400px)', filter: "drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.8))" }}/>
 
           </Grid>
         </Grid>
@@ -67,16 +67,28 @@ const LandingPageBody = () => {
     <Box theme={nexusTheme} sx={{ height: 'auto', backgroundColor: "#FAEBCF", color: "black", display: "flex", justifyContent: "center", paddingBottom: "6rem"}}>
         
         {/* Creates a grid for the left side (text) and the right side (images) */}
-        <Grid container spacing={3} sx={{ height: '100%', paddingTop: '15vh', maxWidth: 'lg'}}>
+        <Grid container spacing={3} sx={{ height: '100%', paddingTop: '15vh', maxWidth: 'lg', justifyContent: {xs: 'center', sm: 'center'}}}>
                   
         {/* Left side of grid (text) */}
-        <Grid size={5} textAlign={'left'} sx={{paddingBottom: '20px'}}>
+        <Grid 
+          // textAlign={'left'} 
+          sx={{
+            paddingBottom: '20px', 
+            width: { xs: '90%', sm: '90%', md: '40%'},
+            textAlign: {xs: 'center', sm: 'center', md: 'left'}
+            }}>
           
-          <Typography variant='h3' color="white" fontWeight={'bold'} textAlign={'left'} width={'fit-content'} sx= {{backgroundColor: "green", boxShadow: "10px 10px black"}}>
+          <Typography color="white" fontWeight={'bold'} width={'fit-content'} 
+            sx= {{
+              backgroundColor: "green", 
+              boxShadow: "10px 10px black", 
+              fontSize: 'clamp(35px, 4.0vw, 50px)', 
+              display: 'block',  
+              margin: {xs: 'auto', sm: 'auto', md: '0'}}}>
             Community Hubs
           </Typography>
 
-          <Typography fontSize="1.35rem" textAlign={'left'} sx={{paddingTop: '20px'}}>
+          <Typography sx={{paddingTop: '20px', fontSize: 'clamp(17px, 1.9vw, 21px)'}}>
             After completing a brief quiz, you will get placed into one of the following hubs where you'll 
             be able to connect with likeminded people. 
           </Typography>
@@ -88,7 +100,7 @@ const LandingPageBody = () => {
         </Grid>
 
         {/* Right side of grid (images) */}
-        <Grid size={7}>
+        <Grid sx={{width: {xs: '60%', sm: '90%', md: '55%'}}}>
           <HubImagesIcons></HubImagesIcons>
       </Grid>
 
@@ -99,11 +111,11 @@ const LandingPageBody = () => {
     <section>
       <Box theme={nexusTheme} sx={{ height: 'auto', backgroundColor: "primary", display: "flex", alignItems: "center", padding: "5rem 0", flexDirection: "column"}}>
           
-          <Typography variant='h3' color="white" sx={{padding: "4vh 0"}}><b>So, how exactly does Nexus work?</b></Typography>
+          <Typography color="white" sx={{padding: "3vh 0", fontSize: 'clamp(25px, 3.0vw, 45px)'}}><b>So, how exactly does Nexus work?</b></Typography>
 
-          <Typography variant='h5' color="white" sx={{padding: "4vh 0"}}>Don't worry. Your data is <i>always</i> anonymized.</Typography>
+          <Typography color="white" sx={{padding: "4vh 0", fontSize: 'clamp(17px, 2.3vw, 28px)'}}>Don't worry. Your data is <i>always</i> anonymized.</Typography>
 
-          <Stack spacing={5} direction="row" >
+          <Stack spacing={{xs: 0, sm: 5}} direction={{xs: 'column', sm: 'row'}} >
             <AboutNexusItem 
               title="Quiz" 
               description="Start by taking a short quiz designed to help us better understand your personality and identify any potential mental health concerns."

@@ -62,10 +62,9 @@ function LoginNavbar() {
       color="linear-gradient(to right,rgb(72, 120, 78),rgb(49, 87, 49))"
       sx={{ boxShadow: "none" }}
     >
-      <Toolbar>
-        {/* Logo and App Name on the left */}
+      <Toolbar sx={{ paddingTop:"3vh" }}>
+      {/* Logo and App Name on the left */}
         <IconButton edge="start" color="inherit" aria-label="logo">
-          {/* <img src="/logo.png" alt="App Logo" style={{ width: 40 }} /> */}
           <SpaIcon color="main" sx={{ fontSize: 35 }} />
         </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>

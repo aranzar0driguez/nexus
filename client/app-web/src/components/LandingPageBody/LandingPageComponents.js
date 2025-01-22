@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import ButtonBase from '@mui/material/ButtonBase';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import nexusTheme from '../../styles/theme';
-
+import QuizIcon from '@mui/icons-material/Quiz';
 
 /* 
   The following code is taken from the MUI API documentation
@@ -113,36 +113,29 @@ import nexusTheme from '../../styles/theme';
   
   /* - - - END OF MUI API CODE - - -*/
   
-  /* Defines the containers for the "How does Nexus work?" */
-  export const AboutNexusContainer = styled(Container)(({ justifyContent }) => ({
-    height: '40vh', 
-    width: '38vw', 
-    display: "flex", 
-    alignItems: "center", 
-    justifyContent: justifyContent || "center",
+
   
-  }));
-  
-  export const AccordionListItem = (props) => {
-    return (
+  export const AboutNexusItem = ({ icon: Icon = QuizIcon, title, description }) => {
+    return(
       <>
-        <Accordion sx= {{backgroundColor: nexusTheme.palette.primary.main}}>
-                <AccordionSummary
-                  expandIcon={<ArrowDownwardIcon />}
-                  aria-controls="panel1-content"
-                  id="panel1-header"
-                >
-                  <Typography component="span" color="white"><b>{props.listTitle}</b></Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography color="white">
-                    {props.listDescription}
-                  </Typography>
-                </AccordionDetails>
-          </Accordion>
+        <Box  
+         sx={{
+          height: '40vh',
+          display: 'flex',
+          alignItems: 'center',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          gap: '15px',
+          width: { xs: '80vw', sm: '30vw' },
+        }}
+        >
+          <Icon sx={{ fontSize: 100, filter: "drop-shadow(4px 4px 10px rgba(0, 0, 0, 1))"}} />
+          <Typography sx={{fontSize: 'clamp(25px, 3.0vw, 35px)'}}><b>{title}</b></Typography>
+          <Typography textAlign={"center"} sx={{fontSize: 'clamp(16px, 1.7vw, 18px)'}}>{description}</Typography>
+        </Box>
       </>
-    );
-  };
+    )
+  }
   
   export const HubImagesIcons = () => {
     return (

@@ -1,3 +1,19 @@
+/* @media (max-width: 500px) {
+    
+    #become-boss {
+        font-size: clamp(20px, 2.5vw, 32px);
+         fontSize="2rem" 
+    }
+
+    .mental-health-text {
+        font-size: clamp(20px, 2.5vw, 32px);
+         font-size=7rem
+    }   
+
+} 
+*/
+
+
 .navbar {
     background: transparent;
     height: 9vh;
@@ -10,3 +26,6 @@
 .navbar.active > .NavBarButton:hover {
     color: white;
 }
+
+
+/* sx= {{flexDirection: {xs: 'column-reverse', sm: 'column-reverse', md: 'row'}} */

@@ -6,10 +6,10 @@ import Box from '@mui/material/Box';
 
 const Footer = () => {
   return (
-    <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
+    <Box sx={{ bgcolor: 'background.paper', p: 1 }} component="footer">
       <Container maxWidth="lg">
-        <Typography variant="h6" align="center" gutterBottom>
-          nexus
+        <Typography variant="h6" align="center" gutterBottom color="textSecondary">
+          Nexus
         </Typography>
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
           Your community of support and understanding.
