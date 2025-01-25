@@ -13,7 +13,6 @@ const LandingPageBody = () => {
     
     <main>
       {/* First section of the landing page */}
-      {/* size={6}  */}
       <Box theme={{nexusTheme}} sx={{ height: 'auto', paddingTop: '7vh', paddingBottom: '10vh', background: 'linear-gradient(to right,rgb(72, 120, 78),rgb(49, 87, 49))',}}>
         <Grid 
           container spacing={2} 

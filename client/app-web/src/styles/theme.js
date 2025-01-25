@@ -10,14 +10,13 @@ const nexusTheme = createTheme({
     },
     secondary: {
       main: "#FAEBCF", // Mindaro
-      // Emerald 45503b
     },
   
     info: {
       main: "#b8f2e6", // Tiffany blue
     },
     background: {
-      default: "#45503b", // Payne's gray
+      default: "#45503b", // Dark green
     },
     text: {
       primary: "#FFFFFF", // White
