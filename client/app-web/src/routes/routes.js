@@ -1,9 +1,9 @@
 // routes.js
-import { LandingPage, Login } from "../pages";
-import  HubForumPage from "../pages/HubForum/HubForumPage"
+import { LandingPage, Login, AllCommunities, HubForumPage } from "../pages";
 
 export const routes = [
   { path: "/", element: <LandingPage /> },
-  { path: "/home", element: <HubForumPage/> },
+  { path: "/home", element: <HubForumPage /> },
   { path: "/login", element: <Login /> },
+  { path: "/allCommunities", element: <AllCommunities /> },
 ];
