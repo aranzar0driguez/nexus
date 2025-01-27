@@ -60,10 +60,10 @@ function ResponsiveDrawer(props) {
 
       <Divider sx={{backgroundColor: 'white'}}/>
       <List >
-        {['Home', 'My Nexus', 'My Journal'].map((text, index) => (
+        {['Home', 'My Nexus', 'My Journal', 'Messages'].map((text, index) => (
           <ListItem divider="true" key={text} disablePadding>
             <ListItemButton>
-              <ListItemIcon>
+              <ListItemIcon sx={{color: 'white'}}>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
@@ -73,10 +73,10 @@ function ResponsiveDrawer(props) {
       </List>
       <Divider sx={{backgroundColor: 'white'}}/>
       <List>
-        {['Depression Hub', 'PTSD Hub', 'Insomnia Hub', 'All Communities'].map((text, index) => (
+        {['Depression Hub', 'PTSD Hub', 'Insomnia Hub', 'All Hubs'].map((text, index) => (
           <ListItem divider="true" key={text} disablePadding>
             <ListItemButton>
-              <ListItemIcon>
+              <ListItemIcon sx={{color: 'white'}}>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
@@ -131,7 +131,7 @@ function ResponsiveDrawer(props) {
           }}
           sx={{
             display: { xs: 'none', sm: 'none', md: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: nexusTheme.palette.primary.main, 
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: nexusTheme.palette.background.default, 
             },
           }}
         >
@@ -141,7 +141,7 @@ function ResponsiveDrawer(props) {
           variant="permanent"
           sx={{
             display: { xs: 'none',sm: 'none', md: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: nexusTheme.palette.primary.main },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: nexusTheme.palette.background.default },
 
           }}
           open

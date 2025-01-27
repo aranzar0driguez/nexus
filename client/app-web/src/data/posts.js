@@ -2,52 +2,74 @@ const Posts = [
     {
       id: 1,
       title: "I Can't Remember the Last Time I Felt Like Myself",
-      description: "Lately, I feel like I'm just going through the motions. Everything feels dull, and even the things I used to love don’t excite me anymore. I’ve tried to talk to people, but I keep hearing 'it’s just a phase' or 'just be positive,' and it makes me feel even more disconnected. Is this what depression feels like?"
+      description: "Lately, I feel like life has lost its color. Even the things I used to cherish—like reading my favorite books or spending time with friends—feel dull and lifeless. It’s like I’m trapped behind a pane of glass, watching the world move around me while I stand still. Whenever I try to talk to someone about it, they shrug it off with phrases like 'this will pass,' but it doesn't feel temporary. Could this be depression?",
+      color: "#FFD1D1",
+      tag: "depression"
     },
     {
       id: 2,
       title: "Social Anxiety Is Destroying My Life",
-      description: "I’m terrified of talking to people. Even small interactions, like ordering food or answering the phone, make me panic. My heart races, and I freeze up. I’ve turned down so many opportunities because I can’t face the fear. I know I’m missing out, but I don’t know how to stop feeling this way."
+      description: "Even thinking about speaking in public sends a wave of panic through me. Ordering at a restaurant? Impossible without rehearsing a hundred times in my head first. The fear of embarrassing myself or being judged keeps me trapped in a shell, avoiding situations that most people take for granted. I've started to isolate myself because it's easier, but deep down, I hate the loneliness that comes with it.",
+      color: "#FFECB6",
+      tag: "social anxiety"
     },
     {
       id: 3,
-      title: "Bipolar Disorder Feels Like a Roller Coaster I Can't Get Off Of",
-      description: "One week, I feel unstoppable—creative, energetic, invincible. Then, almost out of nowhere, I crash. I can't get out of bed, and the world feels meaningless. It's exhausting, and I'm scared that no one will ever understand what it's like. I don’t even understand it myself sometimes."
+      title: "Bipolar Disorder Feels Like a Roller Coaster",
+      description: "Some weeks, I feel like I’m flying. Ideas flood my mind, and it feels like there’s nothing I can’t do. I barely need sleep because I’m so energized. Then, suddenly, everything comes crashing down. It’s like being trapped underwater; I can’t move, can’t think, and can’t escape. The cycles feel endless, leaving me drained and uncertain. I wish I could understand why I can’t find balance in my emotions.",
+      color: "#FFD7F2",
+      tag: "bipolar disorder"
     },
     {
       id: 4,
       title: "My OCD Is Ruling My Life",
-      description: "I can’t stop the intrusive thoughts. I wash my hands until they’re raw, but I never feel clean enough. I check the locks five times, but the anxiety doesn’t go away. My friends joke about being 'a little OCD,' but for me, it’s like I’m trapped in my own mind."
+      description: "The endless loop of checking, washing, and doubting has taken over my days. No matter how many times I turn off the stove or lock the door, I still feel that nagging uncertainty that maybe I missed something. I wash my hands until they’re raw and still don’t feel clean. People joke about being ‘a little OCD,’ but this isn’t something to laugh about. It's exhausting and isolating, and I wish I could break free from this invisible prison.",
+      color: "#CCFFDE",
+      tag: "OCD"
     },
     {
-      id: 5, 
+      id: 5,
       title: "PTSD Keeps Haunting Me",
-      description: "I can’t sleep without nightmares of what happened. Certain sounds or smells make me feel like I’m back in that moment, and it’s overwhelming. I try to avoid triggers, but it feels like they’re everywhere. How do you start living again when you’re stuck in the past?"
+      description: "The memories hit me when I least expect them. A sound, a smell, or even a passing glance at something familiar can send me spiraling back to the worst moment of my life. It's like I'm reliving it all over again, frozen and unable to move. I don’t sleep well anymore because the nightmares make it unbearable. I’ve tried to avoid my triggers, but they’re everywhere, lurking around every corner. How do I escape something that lives in my head?",
+      color: "#B3E6FF",
+      tag: "PTSD"
     },
     {
       id: 6,
       title: "I've Been Fighting Eating Disorders Alone",
-      description: "Every meal feels like a battle. Some days, I eat too much and hate myself for it. Other days, I don’t eat at all. People compliment me for losing weight, but they don’t see the self-destruction behind it. I wish I could stop obsessing over food and my body."
+      description: "Food feels like my enemy. Some days, I find myself avoiding it entirely, consumed by guilt if I even think about eating something indulgent. Other days, I eat too much and feel like I’ve lost control, drowning in shame afterward. I’ve been complimented for losing weight, but they don’t know the unhealthy and destructive behaviors I’ve fallen into. I just want to have a normal relationship with food and stop this never-ending cycle of self-destruction.",
+      color: "#FFE6B3",
+      tag: "eating disorder"
     },
     {
       id: 7,
-      title: "Panic Attacks Are Ruining Everything",
-      description: "I had a panic attack in the middle of a meeting today, and I wanted to run out of the room. My chest got tight, I couldn’t breathe, and I thought I was dying. It’s happening more often now, and I’m terrified I’ll lose my job because of it."
+      title: "Panic Attacks Are Taking Over My Life",
+      description: "I was in the middle of a meeting today when it happened again. My chest got so tight I could hardly breathe. My heart felt like it might explode, and I was sure I was dying. This isn’t the first time. These attacks seem to be happening more often now, and I’m terrified they’ll start to affect my job. How can I explain this to others when I hardly understand it myself?",
+      color: "#FFDEB6",
+      tag: "panic disorder"
     },
     {
       id: 8,
       title: "Struggling With Schizophrenia in Silence",
-      description: "Sometimes, I hear voices that aren’t there. They tell me things I know aren’t real, but it’s so hard to ignore them. I feel like no one believes me when I try to explain, and I’m scared of being judged or labeled as 'crazy.'"
+      description: "The voices aren’t constant, but when they come, they’re loud and relentless. They tell me things that aren’t true, and even though I know they’re not real, it’s hard to fight the fear they bring. Sometimes, I see things that no one else can, and I can’t trust my own mind. I’ve stopped trying to explain to others because I’m scared of being labeled as 'crazy.' The isolation is unbearable, but I don’t know where to turn.",
+      color: "#D8CCFF",
+      tag: "schizophrenia"
     },
     {
       id: 9,
-      title: "Loneliness Feels Like a Void I Can’t Fill",
-      description: "I have friends, but it still feels like I’m completely alone. I don’t want to burden anyone with how I’m feeling, so I keep it all inside. It’s like I’m screaming in a crowded room, and no one can hear me."
+      title: "Loneliness Feels Like a Void",
+      description: "I have friends who care about me, but even when I’m with them, this emptiness doesn’t go away. It’s like there’s a part of me that’s unreachable. I want to open up, but I’m so afraid of being seen as weak or overdramatic. It’s easier to keep everything inside, but that only makes the void feel deeper.",
+      color: "#E8D9FF",
+      tag: "loneliness"
     },
     {
       id: 10,
-      title: "ADHD Makes Me Feel Like I'm Failing at Life",
-      description: "I want to be productive, but I can’t focus for more than a few minutes. I start projects and never finish them. People call me lazy or tell me to just 'try harder,' but they don’t understand how frustrating it is. I feel like I’ll never live up to my potential."
+      title: "ADHD Makes Me Feel Like I’m Falling Behind",
+      description: "Focus is like a butterfly that slips through my hands the moment I try to catch it. I start tasks with enthusiasm, but distractions creep in, and suddenly hours are gone, leaving me with nothing to show for it. People see my missed deadlines and call me lazy, but they don’t understand how much effort I’m already putting in. I wish I could channel my ideas into productivity instead of feeling like I'm always running in circles.",
+      color: "#B3FFD8",
+      tag: "ADHD"
     }
   ]
+  
+  
 export default Posts;

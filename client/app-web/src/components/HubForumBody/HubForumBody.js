@@ -19,7 +19,7 @@ const HubFormBody = () => {
     })
 
     return ( 
-        <main >  
+        <main style={{backgroundColor: nexusTheme.palette.primary.main}}>  
             <Grid direction="row" container 
                 sx={{
                     width: '100vw',
@@ -34,16 +34,18 @@ const HubFormBody = () => {
                 {/**This item holds the posts on the middle side */}
                 <Grid item sx={{width: {xs: '100%', sm: '100%%', md: '60%'}, justifyContent: {xs: 'center', sm: 'center', md: 'center', lg: 'flex-start'}, display: 'flex', overflowY: 'auto'}}>
                     <Container sx={{height: '100vh'}}>
-                        <Typography fontSize={'40px'} 
-                            sx={{
-                                width: 'fit-content',
-                                height: 'fit-content',
-                                display: 'block',
-                                backgroundColor: nexusTheme.palette.primary.main,
-                                boxShadow: "10px 10px black", 
-                                margin: {xs: 'auto', sm: 'auto', md: '20px 0px'}
-                            }}><b>My Hub</b>
-                        </Typography>
+                        <div style={{width: '85%', margin: '0px auto'}}>
+                            <Typography fontSize={'40px'} 
+                                sx={{
+                                    width: 'fit-content',
+                                    height: 'fit-content',
+                                    display: 'block',
+                                    backgroundColor: nexusTheme.palette.background.default,
+                                    boxShadow: "10px 10px black", 
+                                    margin: {xs: 'auto', sm: 'auto', md: '20px 0px'}
+                                }}><b>My Hubs</b>
+                            </Typography>
+                        </div>
                         
                         {/** Lists all of the elements from the JSON file */}
                         {postElements}
@@ -56,9 +58,34 @@ const HubFormBody = () => {
                     <Container sx={{height: '100vh', paddingTop: '75px'}}>
                         <Typography fontSize="30px" fontWeight={'bold'}></Typography>
                         
-                        <RightColumnElement header={"Quote of the day"} text="Mental health problems don’t define who you are. They are something you experience. You walk in the rain and you feel the rain, but, importantly, YOU ARE NOT THE RAIN."></RightColumnElement>
+                    
+                        <RightColumnElement header={"Quote of the day"} text={ <>
+                            <i>"Mental health problems don’t define who you are. They are something you experience. 
+                            You walk in the rain and you feel the rain, but, importantly, you are not the rain."</i>
+                            <br />
+                            <br />
+                            - John D.
+                        </>}></RightColumnElement>
 
-                        <RightColumnElement header={"Meditation of the week"} text={`To begin, follow these steps:\n1. Close your eyes\n2. Breathe deeply`}></RightColumnElement>
+                        <RightColumnElement header={"Meditation of the week"} text={ <>
+                            To begin, follow these steps:
+                            <br />
+                            1. Close your eyes
+                            <br />
+                            2. Breathe deeply
+                        </>}></RightColumnElement>
+
+                        <RightColumnElement header={"Hotline Numbers"} text={<>
+                            <u>Suicide Hotline</u>
+                            <br />
+                            1-800-289-2898
+                            <br />
+
+                            <u>Veterans Crisis Line</u>
+                            <br />
+                            1-800-273-8255 
+
+                            </>}></RightColumnElement>
 
                     </Container>
                 </Grid>
